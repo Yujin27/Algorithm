@@ -1,24 +1,24 @@
-//¾î¶² ¼ö x°¡ ¼Ò¼öÀÎÁö ¾Æ´ÑÁö ÆÇº°ÇÏ´Â ¾Ë°í¸®Áò
+//ì–´ë–¤ ìˆ˜ xê°€ ì†Œìˆ˜ì¸ì§€ ì•„ë‹Œì§€ íŒë³„í•˜ëŠ” ì•Œê³ ë¦¬ì¦˜
 import java.util.Scanner;
 
 public class A_0523 {
 	public boolean isPrime(int n) {
 		
-		//1Àº ¼Ò¼ö°¡ ¾Æ´Ô
+		//1ì€ ì†Œìˆ˜ê°€ ì•„ë‹˜
 		if(n <= 1) 
 			return false;
 		
-		//Â¦¼ö´Â ¼Ò¼ö ¾Æ´Ô
+		//ì§ìˆ˜ëŠ” ì†Œìˆ˜ ì•„ë‹˜
 		if(n % 2 == 0 || n == 2) 
 			return false;
 		
-		//i=3 ~ ·çÆ®n±îÁöÀÇ È¦¼ö
+		//i=3 ~ ë£¨íŠ¸nê¹Œì§€ì˜ í™€ìˆ˜
 		for(int i =3; i*i <= n; i++) {
-			if(n%i ==0) { //i°¡ nÀÇ ¾à¼ö¸é ¼Ò¼ö ¾Æ´Ô
+			if(n%i ==0) { //iê°€ nì˜ ì•½ìˆ˜ë©´ ì†Œìˆ˜ ì•„ë‹˜
 				return false;
 			}
 		}
-		//³ª¸ÓÁö´Â ¼Ò¼ö´Ù!
+		//ë‚˜ë¨¸ì§€ëŠ” ì†Œìˆ˜ë‹¤!
 		return true;
 	}
 	
@@ -32,10 +32,10 @@ public class A_0523 {
 		int a = sc.nextInt();
 				
 		if(MTest.isPrime(a) == false) {
-			System.out.println("¼Ò¼ö¾Æ´Ï¿¡¿Ë");
+			System.out.println("ì†Œìˆ˜ê°€ ì•„ë‹™ë‹ˆë‹¤");
 		}
 		else {
-			System.out.println("¼Ò¼ö¿¡¿Ë~!");
+			System.out.println("ì†Œìˆ˜");
 		}
 	}
 }
