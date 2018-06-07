@@ -1,16 +1,6 @@
 import java.util.Scanner;
+
 public class Graycode {
-	public static int[] transe (int[] a){		
-		for(int i =0; i<2;i++) {
-			if(a[i] == a[i+1]) {
-				a[i+1] = 0;
-			}
-			else {
-				a[i+1] = 1;
-			}
-		}
-		return a;
-	}
 	
 	public static void print(int[] a) {
 		for(int i =0; i <a.length; i++) {
@@ -37,7 +27,16 @@ public class Graycode {
 		
 		//그레이코드로 변환
 		gray[0] = binary[0];
-		transe(binary);
+		
+		for(int i =0; i<3;i++) {
+			if(binary[i] == binary[i+1]) {
+				gray[i+1] = 0;
+			}
+			else {
+				gray[i+1] = 1;
+			}
+		}
+
 		System.out.print("그레이 코드: ");
 		print(gray);
 	}
